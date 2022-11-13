@@ -1,0 +1,1 @@
+<h1 align=center>inventory management system<h1>
