@@ -1,0 +1,83 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+    background-color: rgb(233, 235, 243);
+    text-align: center;
+}
+
+@media screen and (max-width: 100px) {
+    label,
+    input,
+    button,
+    form {
+        width: 100%;
+        margin-top: 0;
+        text-align: left;
+        display: inline-block;
+    }
+    label {
+        text-align: left;
+    }
+}
+
+form {
+    padding: 8px 14px;
+    width: 30%;
+    margin: 0 auto;
+    font-size: 14px;
+    background-color: #d4c4c4;
+    border-bottom: 3px solid #816868;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+label,
+input {
+    display: inline-block;
+}
+
+label {
+    width: 30%;
+    text-align: right;
+}
+
+label+input {
+    width: 30%;
+    margin: 1% 30% 1% 4%;
+}
+
+input+input {
+    float: right;
+}
+
+.button,
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    background-color: rgb(163, 145, 145);
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.button:hover,
+button:hover {
+    color: #5a5cd6;
+    background-color: #959e9d;
+}
+
+#btn {
+    font-size: 12px;
+    text-decoration: dashed;
+    border: 2px #b9d8d4 solid;
+}
