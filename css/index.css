@@ -5,25 +5,10 @@ body {
     text-align: center;
 }
 
-@media screen and (max-width: 100px) {
-    label,
-    input,
-    button,
-    form {
-        width: 100%;
-        margin-top: 0;
-        text-align: left;
-        display: inline-block;
-    }
-    label {
-        text-align: left;
-    }
-}
-
 form {
     padding: 8px 14px;
-    width: 30%;
-    margin: 0 auto;
+    width: 40%;
+    margin: 5px auto;
     font-size: 14px;
     background-color: #d4c4c4;
     border-bottom: 3px solid #816868;
@@ -57,7 +42,6 @@ button {
     color: black;
     border: 2px solid #4CAF50;
     background-color: rgb(163, 145, 145);
-    /* Green */
     border: none;
     color: white;
     padding: 10px 8px;
