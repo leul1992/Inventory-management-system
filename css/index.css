@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 body {
     font-family: 'Times New Roman', Times, serif;
     color: #333;
@@ -5,7 +6,7 @@ body {
     text-align: center;
 }
 
-form {
+.form {
     padding: 8px 14px;
     width: 40%;
     margin: 5px auto;
@@ -19,7 +20,8 @@ form {
 
 label,
 input,
-#brandStatus {
+#brandStatus,
+.add_pr {
     display: inline-block;
 }
 
@@ -65,4 +67,12 @@ button:hover {
     font-size: 12px;
     text-decoration: dashed;
     border: 2px #b9d8d4 solid;
+}
+
+.logo {
+    float: left;
+}
+
+.mainmenu {
+    float: right;
 }

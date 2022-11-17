@@ -1,6 +1,5 @@
 <?php
-$connect =mysql_connect("localhost","root","");
-$db =mysql_select_db("storage",$connect);
+require 'php_action/connect.php';
 ?>
  <?php
  if(isset($_POST['Submit']))
@@ -22,5 +21,5 @@ echo"<img src='image/tick.png' width='30' height='20'>
 <font color='green' size='3px' face='times new roman'>Created Successfully</font>";
 echo"<br><br>";
 }
-mysql_close($connect)
+$conn->close();
 ?> 
