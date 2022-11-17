@@ -12,7 +12,7 @@ $brandName ="";
 $categoryName="";
 $type = explode('.', $_FILES['product_image']['name']);
 	$type = $type[count($type)-1];		
-	$url = '../image'.uniqid(rand()).'.'.$type;
+	$url = '../asset/image/'.uniqid(rand()).'.'.$type;
 	if(in_array($type, array('gif', 'jpg', 'jpeg', 'png', 'JPG', 'GIF', 'JPEG', 'PNG'))) {
 		if(is_uploaded_file($_FILES['product_image']['tmp_name'])) {			
 			if(move_uploaded_file($_FILES['product_image']['tmp_name'], $url)) {

@@ -26,11 +26,14 @@ CREATE TABLE IF NOT EXISTS `product` (
 -- Table structure for table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
-    `user_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    `Full_name` varchar(255) NOT NULL,
-    `Email` varchar(255) NOT NULL,
-    `Password` varchar(255) NOT NULL
+CREATE TABLE IF NOT EXISTS `users` (
+  `fullname` varchar(64) NOT NULL,
+  `user_name` varchar(64) NOT NULL,
+  `password` varchar(64) NOT NULL,
+  `user_role` varchar(64) NOT NULL,
+  `email` varchar(64) NOT NULL,
+  `signup_date` date NOT NULL,
+  `photo` blob NOT NULL
 );
 
 -- -------------------------------------------------------

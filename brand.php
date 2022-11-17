@@ -12,7 +12,7 @@ include_once 'include/header.php';
             <option value="2">Not Available</option>
         </select>
         <br/>
-        <button type="button" name="">Add</button>
+        <button type="button" name="add">Add</button>
     </form>
 </body>
 

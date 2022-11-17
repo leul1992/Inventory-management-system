@@ -12,19 +12,19 @@
 <body>
     <div class='header'>
         <div class='logo'>
-        <img src="../resource/images/logo.png" style="width: 50px; height:50px">
+        <a href='index.php'><img src="asset\image\18624731336376866e54096.png" alt='logo' style="width: 50px; height:50px"></a>
         </div>
         <div class='mainmenu'>
             <table>
                 <tr>
-                    <td><a href = '#'><button type='button' id="btn">Dashboard</button></a></td>
-                    <td><a href = '#'><button type='button' id="btn">Categories</button></a></td>
+                    <td><a href = 'index.php'><button type='button' id="btn">Dashboard</button></a></td>
+                    <td><a href = 'categories.php'><button type='button' id="btn">Categories</button></a></td>
                     <td><a href = 'brand.php'><button type='button' id="btn">Brand</button></a></td>
-                    <td><a href = '#'><button type='button' id="btn">Product</button></a></td>
+                    <td><a href = 'product.php'><button type='button' id="btn">Product</button></a></td>
                     
                 </tr>    
                 </table>
-                    </div>
+        </div>
     </div>
 </br></br>
     <h3 align="center">Welcome to the Inventory Management System</h3>
