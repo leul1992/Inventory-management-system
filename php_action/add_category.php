@@ -2,11 +2,11 @@
 include_once 'connect.php';
 $valid['success'] = array('success' => false, 'messages' => array());
 if (isset($_POST)){
-$brand_name = $_POST['brand_name'];
-$status = $_POST['brandStatus'];
-$active="";
-$sql = "INSERT INTO brands (brand_name, brand_active, brand_status) 
-				VALUES ('$brand_name', '$active', '$status')";
+$categories_name = $_POST['category_name'];
+$status = $_POST['category_Status'];
+$active="";			
+$sql = "INSERT INTO categories (categories_name, categories_active, categories_status) 
+				VALUES ('$categories_name', '$active', '$status')";
 
 				if($conn->query($sql) === TRUE) {
 					$valid['success'] = true;
