@@ -7,6 +7,4 @@ include_once 'php_action/connect.php';
     The Dashboard
 </div>
 
-</body>
-
-</html>
+<?php include_once 'include/footer.php';?>

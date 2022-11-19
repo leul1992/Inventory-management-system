@@ -77,3 +77,27 @@ button:hover {
 .mainmenu {
     float: right;
 }
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.header {
+    min-height: 50px;
+    background: lightcyan;
+}
+
+.footer {
+    min-height: 50px;
+    background: PapayaWhip;
+}
+
+.footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+}
