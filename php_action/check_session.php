@@ -1,6 +1,12 @@
-<?php
-session_start();
+<?php 
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
 
-require_once 'connect.php';
-echo $_SESSION[''];
+	include_once "connect.php";
+	include_once "functions.php";
+
+	
+
 ?>

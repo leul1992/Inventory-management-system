@@ -1,36 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <title>Signin</title>
-</head>
-
-<body>
     <?php
     include_once 'include/header.php';
     ?>
-<div class="form">
-    <form align: left>
+    
+    <div class="card_contain">
+<div class="card">
+<div class="card_container">
+<h1 style="color: rgba(97, 168, 170, 0.6); text-align: center;">LogIn Page</h1>
+    <form action="php_action/signin.php" method="POST" enctype="multipart/form-data">
         <div id="user_name">
-            <label>User Name</label>
+            <label style="margin-top: 20px;">User Name</label>
             <input type="text" name="user_name">
         </div>
         <div id="password">
             <label>Password</label>
             <input type="password" name="password">
         </div>
+        <br>
         <button>Signin</button>
         <p>Do not have an account
-            <a href="signup.html">
+            <a href="signup.php">
                 <input type="button" class="button" id="btn" value="Signup"></a>
         </p>
 
     </form>
+</div>
     </div>
-</body>
-
-</html>
+    </div>
+    <?php include_once 'include/footer.php';?>

@@ -1,16 +1,17 @@
 <?php   
 error_reporting(0);
- session_start();
- include("connection.php");
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
+ include("connect.php");
+ include("functions.php");
 ?>
 
-<?php
-$connect =mysql_connect("localhost","root","");
-$db =mysql_select_db("storage",$connect);
-?>
+
 
  <?php
- if(isset($_POST['submit']))
+ if(isset($_POST))
  {
 $full_name=$_POST["fullname"];
 $email=$_POST["email"];  
@@ -24,21 +25,19 @@ $name=$_FILES['image']['name'];
 $size=$_FILES['image']['size'];
 $type=$_FILES['image']['type'];
 $temp=$_FILES['image']['tmp_name'];
-move_uploaded_file($temp,"myimage/".$name);
+move_uploaded_file($temp,"../asset/image/".$name);
 
-$sql="INSERT INTO user (fullname,user_role,email,user_name,password,signup_date,photo)VALUES('$full_name','$user_role','$email','$user_name','$crypt_pass','$signup_date','$name')";
-if (!mysql_query($sql,$connect))
+$sql="INSERT INTO users (fullname,user_role,email,user_name,password,signup_date,photo)VALUES('$full_name','$user_role','$email','$user_name','$crypt_pass','$signup_date','$name')";
+if (!mysqli_query($conn, $sql))
   {
-  include("signup.html");
-  die('Error: ' . mysql_error());
+  die('Error: ' . mysqli_error($conn));
   }
 else{
-echo"<img src='myimage/tick.png' width='30' height='20'>
-<font color='green' size='3px' face='times new roman'>Created Successfully</font>";
-    include("signup.html");
-}}
+header('Location: http://localhost/inventory-management-system/signin.php');
+}
+}
 
-mysql_close($connect)
+mysqli_close($conn)
 ?>  
 
 
