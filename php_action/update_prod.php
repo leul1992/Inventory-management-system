@@ -35,6 +35,7 @@ if (count($_POST)>0){
 $sql = "SELECT * FROM `product` WHERE product_id='".$_GET['id']."'";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
+include_once '../include/header.php';
 ?>
 <form method="POST" action="" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $row['product_id'];?>">
@@ -56,3 +57,4 @@ $row = $result->fetch_assoc();
 <?php
 
 ?>
+<?php include_once '../include/footer.php';?>
