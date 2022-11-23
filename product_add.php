@@ -1,7 +1,7 @@
     <?php
     include_once 'include/header.php'
     ?>
-    <table class='add_pr'>
+    <div class='form'>
         <form method="POST" action="php_action/add_product.php" enctype="multipart/form-data">
             <label for="product_image" name="product_image">Product Image</label>
             <input type="file" name="product_image" id="product_image" accept="image/*" value="" required><br/>
@@ -20,7 +20,5 @@
             <br/>
             <button type="submit" name="add" id="btn">Add</button>
         </form>
-    </table>
-</body>
-
-</html>
+        </div>
+    <?php include_once 'include/footer.php';?>
