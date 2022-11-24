@@ -15,6 +15,6 @@ if ($id){
     $conn->close();
     
     echo json_encode($valid);
-    header('Location: ../brand.php');
+    header('Location: http://localhost/inventory-management-system/brand.php');
 }
 ?>

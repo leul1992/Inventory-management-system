@@ -1,7 +1,8 @@
-<?
+<?php
 include_once 'connect.php';
-$valid['success'] = array('success' => false, 'messages' => array());
+$output = array('data' => array());
 if (isset($_POST)){
-    $sql = "SELECT * FROM brands WHERE status=1";
+    $sql = "SELECT * FROM brands WHERE brand_status ='1'";
     $result = $conn->query($sql);
 }
+?>

@@ -4,7 +4,7 @@ $valid['success'] = array('success' => false, 'messages' => array());
 if (isset($_POST)){
 $brand_name = $_POST['brand_name'];
 $status = $_POST['brandStatus'];
-$active="";
+$active=1;
 $sql = "INSERT INTO brands (brand_name, brand_active, brand_status) 
 				VALUES ('$brand_name', '$active', '$status')";
 
@@ -19,5 +19,7 @@ $sql = "INSERT INTO brands (brand_name, brand_active, brand_status)
             $conn->close();
 
 	echo json_encode($valid);
+    header('Location: http://localhost/inventory-management-system/brand.php');
             }
+			
 ?>

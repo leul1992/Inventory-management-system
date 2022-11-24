@@ -1,5 +1,8 @@
     <?php
-    include_once 'include/header.php'
+    session_start();
+    include_once 'include/header.php';
+    include_once 'php_action/functions.php';
+    $user_data = check_login($conn);
     ?>
     <div class='form'>
         <form method="POST" action="php_action/add_product.php" enctype="multipart/form-data">

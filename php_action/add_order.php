@@ -70,5 +70,6 @@ if (isset($_POST)){
       $conn->close();
   
       echo json_encode($valid);
+      header('Location: http://localhost/inventory-management-system/index.php');
             }
             ?>

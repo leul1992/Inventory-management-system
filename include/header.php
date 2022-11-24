@@ -62,6 +62,12 @@
                     <li><a href = 'categories.php' class="center">Category</a></li>
                     <li><a href = 'brand.php' class="center">Brand</a></li>
                     <li><a href = 'product.php' class="center">Product</a></li>
+                    <li><a href = 'catalog.php' class="center">Catalog</a></li>
+                    <li><a href = 'sales.php' class="center">Sales</a></li>
+                    <li><a href = 'sales_report.php' class="center">Sales Report</a></li>
+                    <?php if (isset($_SESSION['user_id'])){?>
+                    <a href = 'php_action/logout.php'><button style="font-size: 10px; height: 25px;">Logout</button></a>
+                    <?php } ?>
         </ul>
         </div>
         </div>

@@ -1,7 +1,10 @@
 <?php
+session_start();
 include_once 'include/header.php';
 include_once 'php_action/connect.php';
 include_once 'php_action/select_product.php';
+include_once 'php_action/functions.php';
+$user_data = check_login($conn);
 ?>
 <div class="container">
     <div id='add_p'>
@@ -25,7 +28,7 @@ include_once 'php_action/select_product.php';
                     <br/>Price: <?php echo " ".$row['rate'];?>
                     <br/>Rate: <?php echo " ".$row['rate'];?>
                     <br/>Status: <?php echo " ".$row['status'];?>
-                    <br/><a href="php_action/update_prod.php?id=<?php echo $row["product_id"]; ?>"><button type="submit" name="update">Update</button></a>
+                    <br/><a href="update_prod.php?id=<?php echo $row["product_id"]; ?>"><button type="submit" name="update">Update</button></a>
                     <a href="php_action/delete_prod.php?id=<?php echo $row["product_id"]; ?>" onclick="return confirm('Are you sure you want to delete this')"><button type="submit" name="update">Delete</button></a>
                 </div>
             </div>

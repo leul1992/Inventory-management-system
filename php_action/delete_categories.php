@@ -15,6 +15,6 @@ if ($id){
     $conn->close();
     
     echo json_encode($valid);
-    header('Location: ../categories.php');
+    header('Location: http://localhost/inventory-management-system/categories.php');
 }
 ?>

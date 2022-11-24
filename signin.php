@@ -19,7 +19,7 @@
         <button>Signin</button>
         <p>Do not have an account
             <a href="signup.php">
-                <input type="button" class="button" id="btn" value="Signup"></a>
+                <input type="button" class="button" id="btn" style='width: 60px;' value="Signup"></a>
         </p>
 
     </form>

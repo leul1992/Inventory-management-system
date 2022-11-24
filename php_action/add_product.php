@@ -38,5 +38,6 @@ $type = explode('.', $_FILES['product_image']['name']);
 	$conn->close();
 
 	echo json_encode($valid);
+	header('Location: http://localhost/inventory-management-system/product.php');
 }
 ?>
