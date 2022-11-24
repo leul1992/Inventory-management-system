@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
 -- Table structure for table `sales`
 --
 
-CREATE TABLE `sales` (
+CREATE TABLE IF NOT EXISTS `sales` (
   `product_name` varchar(64) NOT NULL,
   `quantity` varchar(64) NOT NULL,
   `bprice` varchar(64) NOT NULL,
@@ -123,6 +123,6 @@ CREATE TABLE `sales` (
 -- Table structure for table `catalog`
 --
 
-CREATE TABLE `catalog` (
+CREATE TABLE IF NOT EXISTS `catalog` (
   `catalog_name` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
