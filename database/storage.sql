@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 
 CREATE TABLE IF NOT EXISTS `users` (
   `fullname` varchar(64) NOT NULL,
-  `user_name` varchar(64) NOT NULL,
+  `user_name` varchar(64) NOT NULL PRIMARY KEY,
   `password` varchar(64) NOT NULL,
   `user_role` varchar(64) NOT NULL,
   `email` varchar(64) NOT NULL,

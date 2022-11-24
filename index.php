@@ -20,19 +20,18 @@ include_once 'php_action/show_order.php';
 
     
 <?php
-    if($result->num_rows > 0) { 
-        while($row = $result->fetch_assoc()){
+    if(($result->num_rows > 0)) { 
+        while($row = $result->fetch_assoc()) {
             ?>
             <div class="card_contain">
             <div class='card'>
-                <img src='<?php echo $row['product_image'];?>' style='width:10%;heiht:10%;display: block;margin-left: auto;margin-right: auto;' alt="<?php echo $row['product_name'];?>">
                 <div class="card_container">
-                    Client Name:<?php echo " ".$row['order_name'];?>
-                    <br/>Order Status: <?php echo " ".$row['quantity'];?>
-                    <br/>Price: <?php echo " ".$row['rate'];?>
-                    <br/>Rate: <?php echo " ".$row['rate'];?>
-                    <br/>Status: <?php echo " ".$row['status'];?>
-<br>                    <a href="php_action/delete_order.php?id=<?php echo $row["product_id"]; ?>" onclick="return confirm('Are you sure you want to delete this')"><button type="submit" name="update">Delete</button></a>
+                    Client Name:<?php echo " ".$row['client_name'];?>
+                    &emsp;&emsp;Order Status: <?php echo " ".$row['order_status'];?>
+                    &emsp;&emsp;Quantity: <?php echo " ".$row['quantity'];?>
+                    &emsp;&emsp;Rate: <?php echo " ".$row['rate'];?>
+                    &emsp;&emsp;Total: <?php echo " ".$row['total'];?>
+<br>                    <a href="php_action/delete_order.php?id=<?php echo $row["order_id"]; ?>" onclick="return confirm('Are you sure you want to delete this')"><button type="submit" name="update">Delete</button></a>
                 </div>
             </div>
             </div>
