@@ -11,7 +11,7 @@ include_once "php_action/functions.php";
     /* if ($user_data['user_name' == 'admin']) */
 ?>
 <div style='size:50px'>
-    The Dashboard
+    
 </div>
 
 <?php include_once 'include/footer.php';?>
