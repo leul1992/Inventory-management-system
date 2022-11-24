@@ -8,6 +8,7 @@ include_once "php_action/functions.php";
 
 
 	$user_data = check_login($conn);
+    /* if ($user_data['user_name' == 'admin']) */
 ?>
 <div style='size:50px'>
     The Dashboard

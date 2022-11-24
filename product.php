@@ -6,9 +6,12 @@ include_once 'php_action/select_product.php';
 <div class="container">
     <div id='add_p'>
     <div id="add_prod">
-    <a href='product_add.php' valign='left'>Add Product</a>
+    <a href='product_add.php' valign='left' class='link'>Add Product</a><br>
+    <a href='add_order.php' valign='left' class='link'>Add Order</a>
 </div>
-</div>
+    </div>
+
+    
 <?php
     if($result->num_rows > 0) { 
         while($row = $result->fetch_assoc()){
