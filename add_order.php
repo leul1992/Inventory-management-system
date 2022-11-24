@@ -2,79 +2,31 @@
 include_once 'php_action/connect.php';
 include_once 'include/header.php';
 ?>
-<div class='form'>
-
-<table class="table" id="productTable">
-			  	<thead>
-			  		<tr>			  			
-			  			<th style="width:40%;">Product</th>
-			  			<th style="width:20%;">Rate</th>
-			  			<th style="width:10%;">Available Quantity</th>
-			  			<th style="width:15%;">Quantity</th>			  			
-			  			<th style="width:25%;">Total</th>			  			
-			  			<th style="width:10%;"></th>
-			  		</tr>
-			  	</thead>
-			  	<tbody>
-			  		<?php
-			  		$arrayNumber = 0;
-			  		for($x = 1; $x < 4; $x++) { ?>
-			  			<tr id="row<?php echo $x; ?>" class="<?php echo $arrayNumber; ?>">			  				
-			  				<td style="margin-left:20px;">
-			  					<div class="form-group">
-
-			  					<select class="form-control" name="productName[]" id="productName<?php echo $x; ?>" onchange="getProductData(<?php echo $x; ?>)" >
-			  						<option value="">~~SELECT~~</option>
-			  						<?php
-			  							$productSql = "SELECT * FROM product WHERE active = 1 AND status = 1 AND quantity != 0";
-			  							$productData = $connect->query($productSql);
-
-			  							while($row = $productData->fetch_array()) {									 		
-			  								echo "<option value='".$row['product_id']."' id='changeProduct".$row['product_id']."'>".$row['product_name']."</option>";
-										 	}
-
-			  						?>
-		  						</select>
-			  					</div>
-			  				</td>
-			  				<td style="padding-left:20px;">			  					
-			  					<input type="text" name="rate[]" id="rate<?php echo $x; ?>" autocomplete="off" disabled="true" class="form-control" />			  					
-			  					<input type="hidden" name="rateValue[]" id="rateValue<?php echo $x; ?>" autocomplete="off" class="form-control" />			  					
-			  				</td>
-							<td style="padding-left:20px;">
-			  					<div class="form-group">
-									<p id="available_quantity<?php echo $x; ?>"></p>
-			  					</div>
-			  				</td>
-			  				<td style="padding-left:20px;">
-			  					<div class="form-group">
-			  					<input type="number" name="quantity[]" id="quantity<?php echo $x; ?>" onkeyup="getTotal(<?php echo $x ?>)" autocomplete="off" class="form-control" min="1" />
-			  					</div>
-			  				</td>
-			  				<td style="padding-left:20px;">			  					
-			  					<input type="text" name="total[]" id="total<?php echo $x; ?>" autocomplete="off" class="form-control" disabled="true" />			  					
-			  					<input type="hidden" name="totalValue[]" id="totalValue<?php echo $x; ?>" autocomplete="off" class="form-control" />			  					
-			  				</td>
-			  				<td>
-
-			  					<button class="btn btn-default removeProductRowBtn" type="button" id="removeProductRowBtn" onclick="removeProductRow(<?php echo $x; ?>)"><i class="glyphicon glyphicon-trash"></i></button>
-			  				</td>
-			  			</tr>
-		  			<?php
-		  			$arrayNumber++;
-			  		} // /for
-			  		?>
-			  	</tbody>			  	
-			  </table>
-
-
-    <form action="php_action/add_order.php" method="POST" enctype="multipart/form-data">
+                                        <form action="php_action/add_order.php" method="POST" enctype="multipart/form-data">
+                                            <div class='form'>
+                                                                      
+                                                                      <label style="width:40%;">Product</label>
+                                                                      <select name="productName" id="productName" style="width: 200px; float: center;">
+                                                                                  <option value="">SELECT</option>
+                                                                                  <?php
+                                                                                      $productSql = "SELECT * FROM product WHERE active = 1 AND status = 1 AND quantity != 0";
+                                                                                      $productData = $conn->query($productSql);
+                                            
+                                                                                      while($row = $productData->fetch_array()) {									 		
+                                                                                          echo "<option value='".$row['product_id']."' id='changeProduct".$row['product_id']."'>".$row['product_name']."</option>";
+                                                                                         }
+                                            
+                                                                                  ?>
+                                                                              </select>
+                                                                            <label for="quantity">Quantity</label>
+                                                                            <input type="text" name="quantity" id="quantity">
+                                            
+                                                                                    </div><br><br>
+        <div class='form'>
             <label for="client_name" name="client_name">Client Name</label>
             <input type="text" name="client_name" id="client_name" accept="image/*" value="" required><br/>
             <label for=" client_contract ">Client Contract</label>
             <input type="text " name="client_contract" required><br/>
-            <!-- <label for=" orderDate ">Date</label>
-            <input type="text " name="orderDate" required><br/> -->
             <label for="orderDate" name="orderDate">order Date</label>
             <input type="date" name="orderDate" id="orderDate" required><br/>
             <label for="subTotalValue" name="subTotalValue">subTotalValue</label>

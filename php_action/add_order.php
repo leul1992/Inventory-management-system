@@ -40,28 +40,29 @@ if (isset($_POST)){
       echo $_POST['productName'];
       $orderItemStatus = false;
   
-      for($x = 0; $x < count($_POST['product_name']); $x++) {			
-          $updateProductQuantitySql = "SELECT product.quantity FROM product WHERE product.product_id = ".$_POST['productName'][$x]."";
+      			
+          $updateProductQuantitySql = "SELECT * FROM product WHERE product.product_id = ".$_POST['productName']."";
           $updateProductQuantityData = $conn->query($updateProductQuantitySql);
           
           
-          while ($updateProductQuantityResult = $updateProductQuantityData->fetch_row()) {
-              $updateQuantity[$x] = $updateProductQuantityResult[0] - $_POST['quantity'][$x];							
+          while ($updateProductQuantityResult = $updateProductQuantityData->fetch_assoc()) {
+              $updateQuantity = $updateProductQuantityResult['quantity'] - $_POST['quantity'];							
                   // update product table
-                  $updateProductTable = "UPDATE product SET quantity = '".$updateQuantity[$x]."' WHERE product_id = ".$_POST['productName'][$x]."";
+                  $updateProductTable = "UPDATE product SET quantity = '".$updateQuantity."' WHERE product_id = ".$_POST['productName']."";
                   $conn->query($updateProductTable);
+                  echo $_POST['productName'].": with value". $updateQuantity;
   
                   // add into order_item
                   $orderItemSql = "INSERT INTO order_item (order_id, product_id, quantity, rate, total, order_item_status) 
-                  VALUES ('$order_id', '".$_POST['productName'][$x]."', '".$_POST['quantity'][$x]."', '".$_POST['rateValue'][$x]."', '".$_POST['totalValue'][$x]."', 1)";
+                  VALUES ('$order_id', '".$_POST['productName']."', '".$_POST['quantity']."', '".$updateProductQuantityResult['rate']."', '".$totalAmountValue."', 1)";
   
-                  $conn->query($orderItemSql);		
+                  	
   
-                  if($x == count($_POST['productName'])) {
+                  if($conn->query($orderItemSql)) {
                       $orderItemStatus = true;
                   }		
           } // while	
-      } // /for quantity
+      
   
       $valid['success'] = true;
       $valid['messages'] = "Successfully Added";		
