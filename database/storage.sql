@@ -101,3 +101,28 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `categories_active` int(11) NOT NULL DEFAULT '0',
   `categories_status` int(11) NOT NULL DEFAULT '0'
 );
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sales`
+--
+
+CREATE TABLE `sales` (
+  `product_name` varchar(64) NOT NULL,
+  `quantity` varchar(64) NOT NULL,
+  `bprice` varchar(64) NOT NULL,
+  `sprice` varchar(64) NOT NULL,
+  `date` varchar(64) NOT NULL,
+  `categoryName` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `catalog`
+--
+
+CREATE TABLE `catalog` (
+  `catalog_name` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
