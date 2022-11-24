@@ -13,7 +13,6 @@ include_once 'php_action/show_order.php';
 <div class="container">
     <div id='add_p'>
     <div id="add_prod">
-    <a href='product_add.php' valign='left' class='link'>Add Product</a><br>
     <a href='add_order.php' valign='left' class='link'>Add Order</a>
 </div>
     </div>
@@ -21,11 +20,17 @@ include_once 'php_action/show_order.php';
     
 <?php
     if(($result->num_rows > 0)) { 
+        ?>
+        <h1 style="color: rgba(97, 168, 170, 0.6); text-align: center;">The list of Ordered Items</h1><br>
+        <?php
         while($row = $result->fetch_assoc()) {
             ?>
+            
             <div class="card_contain">
             <div class='card'>
                 <div class="card_container">
+                    
+    
                     Client Name:<?php echo " ".$row['client_name'];?>
                     &emsp;&emsp;Order Status: <?php echo " ".$row['order_status'];?>
                     &emsp;&emsp;Quantity: <?php echo " ".$row['quantity'];?>
