@@ -3,10 +3,9 @@ include_once 'connect.php';
 $valid['success'] = array('success' => false, 'messages' => array());
 if (isset($_POST)){
 $categories_name = $_POST['category_name'];
-$status = $_POST['category_Status'];
-$active="";			
+$status = $_POST['category_Status'];			
 $sql = "INSERT INTO categories (categories_name, categories_active, categories_status) 
-				VALUES ('$categories_name', '$active', '$status')";
+				VALUES ('$categories_name', 1, '$status')";
 
 				if($conn->query($sql) === TRUE) {
 					$valid['success'] = true;

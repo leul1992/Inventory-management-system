@@ -65,10 +65,20 @@
                     <li><a href = 'catalog.php' class="center">Catalog</a></li>
                     <li><a href = 'sales.php' class="center">Sales</a></li>
                     <li><a href = 'sales_report.php' class="center">Sales Report</a></li>
-                    <?php if (isset($_SESSION['user_id'])){?>
-                    <a href = 'php_action/logout.php'><button style="font-size: 10px; height: 25px;">Logout</button></a>
-                    <?php } ?>
-        </ul>
+                </ul>
+                <?php if (isset($_SESSION['user_id'])){
+                    include_once 'php_action/connect.php';
+                    $sql = 'SELECT * FROM users WHERE user_name = "' . $_SESSION['user_id'].'"';
+                    $result = $conn->query($sql);
+                    $res = $result->fetch_assoc();
+                    
+                    ?>
+                <div class='right' style='float: right;margin:20px;'>
+                
+                <h3 class='username'><?php echo $res['user_name']; ?></h3>
+                <a href = 'php_action/logout.php'><button style="font-size: 15px; height: 30px; border-radius: 100%;">Logout</button></a>
+            </div>
+                <?php } ?>
         </div>
         </div>
         <!-- <tr> -->

@@ -7,9 +7,8 @@ $quantity = $_POST['quantity'];
 $price = $_POST['price'];
 $rate = $_POST['rate'];
 $status = $_POST['status'];
-$active = $_POST['active'];
-$brandName ="";
-$categoryName="";
+$brandName =$_POST['brand_id'];
+$categoryName=$_POST['category_id'];
 $type = explode('.', $_FILES['product_image']['name']);
 	$type = $type[count($type)-1];		
 	$url = '../asset/image/'.uniqid(rand()).'.'.$type;
@@ -19,7 +18,7 @@ $type = explode('.', $_FILES['product_image']['name']);
 			if(move_uploaded_file($_FILES['product_image']['tmp_name'], $url)) {
 				
 				$sql = "INSERT INTO product (product_name, product_image, brand_id, categories_id, quantity, rate, active, status) 
-				VALUES ('$product_name', '$path', '$brandName', '$categoryName', '$quantity', '$rate', '$status', 1)";
+				VALUES ('$product_name', '$path', '$brandName', '$categoryName', '$quantity', '$rate', 1, '$status')";
 
 				if($conn->query($sql) === TRUE) {
 					$valid['success'] = true;

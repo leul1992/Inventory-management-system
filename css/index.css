@@ -12,11 +12,17 @@
                                         height: auto;
                                         margin: 0 auto;
                                         font-size: 14px;
-                                        background-color: #d4c4c4;
-                                        border-bottom: 3px solid #816868;
+                                        background-color: rgba(180, 142, 131, 0.3);
+                                        border-bottom: 3px solid #b19a9a;
                                         border-radius: 10px;
                                         position: relative;
                                         display: inline-block;
+                                    }
+                                    
+                                    .username {
+                                        color: rgba(9, 32, 11, 0.3);
+                                        border: 5px solid rgba(22, 56, 56, 0.4);
+                                        border-radius: 45%;
                                     }
                                     
                                     #login {
@@ -52,7 +58,7 @@
                                         background-color: white;
                                         color: black;
                                         border: 2px solid #4CAF50;
-                                        background-color: rgb(163, 145, 145);
+                                        background-color: rgb(164, 170, 158);
                                         border: none;
                                         color: white;
                                         padding: 10px 8px;
@@ -95,6 +101,10 @@
                                     
                                     .navigation-bar {
                                         background: rgba(206, 224, 247, 0.2);
+                                    }
+                                    
+                                    li.right {
+                                        float: right;
                                     }
                                     
                                     .footer {

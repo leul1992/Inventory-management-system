@@ -5,26 +5,28 @@ include_once 'include/header.php';
 include_once 'php_action/functions.php';
 $user_data = check_login($conn);
 ?>
-                                        <form action="php_action/add_order.php" method="POST" enctype="multipart/form-data">
-                                            <div class='form'>
-                                                                      
-                                                                      <label style="width:40%;">Product</label>
-                                                                      <select name="productName" id="productName" style="width: 200px; float: center;">
-                                                                                  <option value="">SELECT</option>
-                                                                                  <?php
-                                                                                      $productSql = "SELECT * FROM product WHERE active = 1 AND status = 1 AND quantity != 0";
-                                                                                      $productData = $conn->query($productSql);
-                                            
-                                                                                      while($row = $productData->fetch_array()) {									 		
-                                                                                          echo "<option value='".$row['product_id']."' id='changeProduct".$row['product_id']."'>".$row['product_name']."</option>";
-                                                                                         }
-                                            
-                                                                                  ?>
-                                                                              </select>
-                                                                            <label for="quantity">Quantity</label>
-                                                                            <input type="text" name="quantity" id="quantity">
-                                            
-                                                                                    </div><br><br>
+        <form action="php_action/add_order.php" method="POST" enctype="multipart/form-data">
+        <div class='form'>
+                                      
+                            <label style="width:50%;text-align:center;">Product</label>
+                            <select name="productName" id="productName" style="width: 200px; display: inline-block;">
+                                        <option value="">SELECT</option>
+                                        <?php
+                                            $productSql = "SELECT * FROM product WHERE active = 1 AND status = 1 AND quantity != 0";
+                                            $productData = $conn->query($productSql);
+
+                                            while($row = $productData->fetch_array()) {									 		
+                                                echo "<option value='".$row['product_id']."' id='changeProduct".$row['product_id']."'>".$row['product_name']."</option>";
+                                               }
+
+                                        ?>
+                                    </select>
+                                    <br>
+                                    
+                                  <label for="quantity">Quantity</label>
+                                  <input type="text" name="quantity" id="quantity">
+
+                                          </div><br><br>
         <div class='form'>
             <label for="client_name" name="client_name">Client Name</label>
             <input type="text" name="client_name" id="client_name" accept="image/*" value="" required><br/>
@@ -66,6 +68,8 @@ $user_data = check_login($conn);
             <option value="2">Not Available</option>
         </select>
             <br/>
+            
             <button type="submit" name="add" id="btn">Add</button> 
     </form>
 </div>
+<?php include_once 'include/footer.php';

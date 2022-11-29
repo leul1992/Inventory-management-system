@@ -7,13 +7,12 @@ if (count($_POST)>0){
     $price = $_POST['price'];
     $rate = $_POST['rate'];
     $status = $_POST['status'];
-    $active = $_POST['active'];
-    $brandName ="";
-    $categoryName="";
+    $brandName =$_POST['brand_id'];
+    $categoryName=$_POST['category_id'];
 	$id=$_POST['id'];
 	$sql = "UPDATE product 
     SET product_name='$product_name', brand_id='$brandName', categories_id='$categoryName',
-    quantity= '$quantity', rate= '$rate', active= '$status', status='1' WHERE product_id='$id'";
+    quantity= '$quantity', rate= '$rate', active=1, status='$status' WHERE product_id='$id'";
 
 	if($conn->query($sql) === TRUE) {
 		$valid['success'] = true;

@@ -4,9 +4,8 @@ $valid['success'] = array('success' => false, 'messages' => array());
 if (count($_POST)>0){
 $categories_name = $_POST['category_name'];
 $status = $_POST['category_Status'];
-$active="";
 $id=$_POST['id'];
-$sql = "UPDATE categories SET categories_name='$categories_name', categories_active='$active', categories_status='$status' WHERE categories_id='$id'";
+$sql = "UPDATE categories SET categories_name='$categories_name', categories_active=1, categories_status='$status' WHERE categories_id='$id'";
 
 				if($conn->query($sql) === TRUE) {
 					$valid['success'] = true;
