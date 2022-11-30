@@ -17,8 +17,8 @@ $type = explode('.', $_FILES['product_image']['name']);
 		if(is_uploaded_file($_FILES['product_image']['tmp_name'])) {			
 			if(move_uploaded_file($_FILES['product_image']['tmp_name'], $url)) {
 				
-				$sql = "INSERT INTO product (product_name, product_image, brand_id, categories_id, quantity, rate, active, status) 
-				VALUES ('$product_name', '$path', '$brandName', '$categoryName', '$quantity', '$rate', 1, '$status')";
+				$sql = "INSERT INTO product (product_name, product_image, brand_id, categories_id, quantity, price, rate, active, status) 
+				VALUES ('$product_name', '$path', '$brandName', '$categoryName', '$quantity', '$price', '$rate', 1, '$status')";
 
 				if($conn->query($sql) === TRUE) {
 					$valid['success'] = true;

@@ -1,296 +1,321 @@
-                                    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-                                    body {
-                                        font-family: 'Times New Roman', Times, serif;
-                                        color: #333;
-                                        background-color: rgb(233, 235, 243);
-                                        text-align: center;
-                                    }
-                                    
-                                    .form {
-                                        padding: 8px 14px;
-                                        width: 50%;
-                                        height: auto;
-                                        margin: 0 auto;
-                                        font-size: 14px;
-                                        background-color: rgba(180, 142, 131, 0.3);
-                                        border-bottom: 3px solid #b19a9a;
-                                        border-radius: 10px;
-                                        position: relative;
-                                        display: inline-block;
-                                    }
-                                    
-                                    .username {
-                                        color: rgba(9, 32, 11, 0.3);
-                                        border: 5px solid rgba(22, 56, 56, 0.4);
-                                        border-radius: 45%;
-                                    }
-                                    
-                                    #login {
-                                        text-align: center;
-                                    }
-                                    
-                                    label,
-                                    input,
-                                    #brandStatus,
-                                    .add_pr,
-                                    select {
-                                        width: 200px;
-                                        display: inline-block;
-                                    }
-                                    
-                                    label {
-                                        width: 50%;
-                                        text-align: center;
-                                    }
-                                    
-                                    label+input+#brandStatus {
-                                        width: 100px;
-                                        margin: 0 30% 0 4%;
-                                    }
-                                    
-                                    input+input+#brandStatus,
-                                    #product_image {
-                                        float: right;
-                                    }
-                                    
-                                    .button,
-                                    button {
-                                        background-color: white;
-                                        color: black;
-                                        border: 2px solid #4CAF50;
-                                        background-color: rgb(164, 170, 158);
-                                        border: none;
-                                        color: white;
-                                        padding: 10px 8px;
-                                        text-align: center;
-                                        text-decoration: none;
-                                        display: inline-block;
-                                        font-size: 16px;
-                                        margin: 4px 2px;
-                                        cursor: pointer;
-                                        border-radius: 20px;
-                                    }
-                                    
-                                    .button:hover,
-                                    button:hover {
-                                        color: #5a5cd6;
-                                        background-color: #959e9d;
-                                    }
-                                    
-                                    #btn {
-                                        font-size: 12px;
-                                        text-decoration: dashed;
-                                        border: 2px #b9d8d4 solid;
-                                    }
-                                    
-                                    .logo {
-                                        float: left;
-                                        background-size: contain;
-                                    }
-                                    
-                                    .mainmenu {
-                                        float: right;
-                                    }
-                                    
-                                    body {
-                                        min-height: 100vh;
-                                        margin: 0;
-                                        display: grid;
-                                        grid-template-rows: auto 1fr auto;
-                                    }
-                                    
-                                    .navigation-bar {
-                                        background: rgba(206, 224, 247, 0.2);
-                                    }
-                                    
-                                    li.right {
-                                        float: right;
-                                    }
-                                    
-                                    .footer {
-                                        min-height: 50px;
-                                        background: rgba(194, 209, 238, 0.2);
-                                        clear: both;
-                                        position: relative;
-                                        height: 10px;
-                                        margin-top: 80px;
-                                        margin-bottom: 0px;
-                                    }
-                                    /* body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+    background-color: rgb(233, 235, 243);
+    text-align: center;
+}
+
+.form {
+    padding: 8px 14px;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    font-size: 14px;
+    background-color: rgba(180, 142, 131, 0.3);
+    border-bottom: 3px solid #b19a9a;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.username {
+    color: rgba(9, 32, 11, 0.3);
+    border: 5px solid rgba(22, 56, 56, 0.4);
+    border-radius: 45%;
+}
+
+#login {
+    text-align: center;
+}
+
+label,
+input,
+#brandStatus,
+.add_pr,
+select {
+    width: 200px;
+    display: inline-block;
+}
+
+label {
+    width: 50%;
+    text-align: center;
+}
+
+label+input+#brandStatus {
+    width: 100px;
+    margin: 0 30% 0 4%;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0 0 15px 4px rgba(109, 77, 77, 0.06);
+    border-bottom: 1px solid rgb(78, 82, 104);
+    background: transparent;
+    padding: 8px 0 5px 0;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
+    border: 0;
+    border-bottom: 1px solid #2a4147;
+}
+
+input+input+#brandStatus,
+#product_image {
+    float: right;
+}
+
+.button,
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    background-color: rgb(164, 170, 158);
+    border: none;
+    color: white;
+    padding: 10px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.button:hover,
+button:hover {
+    color: #222353;
+    background-color: #959e9d;
+}
+
+#btn {
+    font-size: 12px;
+    text-decoration: dashed;
+    border: 2px #b9d8d4 solid;
+}
+
+.logo {
+    float: left;
+    background-size: contain;
+}
+
+.mainmenu {
+    float: right;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.navigation-bar {
+    background: rgba(206, 224, 247, 0.2);
+}
+
+li.right {
+    float: right;
+}
+
+.footer {
+    min-height: 50px;
+    background: rgba(194, 209, 238, 0.2);
+    clear: both;
+    position: relative;
+    height: 10px;
+    margin-top: 80px;
+    margin-bottom: 0px;
+}
+
+
+/* body {
     margin: 0;
 } */
-                                    
-                                    .topnav {
-                                        position: relative;
-                                        background-color: #333;
-                                        overflow: hidden;
-                                    }
-                                    
-                                    ul.topnav {
-                                        list-style-type: none;
-                                        margin: 0;
-                                        padding: 0;
-                                        overflow: hidden;
-                                        background-color: rgba(56, 87, 63, 0.2);
-                                    }
-                                    
-                                    ul.topnav li {
-                                        float: left;
-                                    }
-                                    
-                                    ul.topnav li a {
-                                        display: block;
-                                        color: white;
-                                        text-align: right;
-                                        padding: 14px 16px;
-                                        text-decoration: none;
-                                    }
-                                    
-                                    .topnav a {
-                                        float: right;
-                                        color: #f2f2f2;
-                                        text-align: center;
-                                        padding: 14px 16px;
-                                        text-decoration: none;
-                                        font-size: 17px;
-                                    }
-                                    
-                                    .topnav a:hover {
-                                        background-color: #ddd;
-                                        color: black;
-                                    }
-                                    
-                                    ul.topnav li a:hover:not(.active) {
-                                        background-color: rgb(152, 165, 202);
-                                    }
-                                    
-                                    ul.topnav li a.active {
-                                        background-color: #5e5f61;
-                                    }
-                                    /* ul.topnav li.right {
+
+.topnav {
+    position: relative;
+    background-color: #333;
+    overflow: hidden;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(56, 87, 63, 0.2);
+}
+
+ul.topnav li {
+    float: left;
+}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+ul.topnav li a:hover:not(.active) {
+    background-color: rgb(152, 165, 202);
+}
+
+ul.topnav li a.active {
+    background-color: #5e5f61;
+}
+
+
+/* ul.topnav li.right {
     float: right !important;
 } */
-                                    /* .link {
-                                        display: inline;
-                                        padding: 2px;
-                                        margin-top: 10px;
-                                        border: 1px solid #345;
-                                        border-radius: 20%;
-                                    } */
-                                    
-                                    #productName {
-                                        width: auto;
-                                    }
-                                    
-                                    @media screen and (max-width: 600px) {
-                                        select {
-                                            width: 50%;
-                                            text-align: center;
-                                        }
-                                        ul.topnav li.right,
-                                        ul.topnav li {
-                                            float: none;
-                                        }
-                                        .topnav a {
-                                            font-size: 9px;
-                                        }
-                                        .center {
-                                            width: 100%;
-                                        }
-                                        .form,
-                                        label,
-                                        input,
-                                        img,
-                                        header {
-                                            width: 100%;
-                                            margin-top: 0;
-                                        }
-                                        label {
-                                            text-align: center;
-                                        }
-                                        #product_image {
-                                            text-align: right;
-                                            margin: auto;
-                                        }
-                                    }
-                                    
-                                    .img {
-                                        border: 1px solid #ddd;
-                                        border-radius: 4px;
-                                        padding: 5px;
-                                        width: 60px;
-                                        height: 60px;
-                                        margin-left: 20px;
-                                        margin-top: 10px;
-                                    }
-                                    
-                                    .img:hover {
-                                        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-                                    }
-                                    
-                                    .navigation-bar ul {
-                                        padding: 0;
-                                        margin: 20px;
-                                        text-align: center;
-                                        display: inline-block;
-                                        vertical-align: top;
-                                    }
-                                    
-                                    .container {
-                                        text-align: center;
-                                    }
-                                    
-                                    .container>#add_p>#add_prod {
-                                        text-align: center;
-                                        border: 10px solid rgb(98, 133, 134);
-                                        padding: 10px;
-                                        margin: 20px;
-                                        width: 65%;
-                                    }
-                                    
-                                    .container>#add_p {
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                    }
-                                    
-                                    #result {
-                                        text-align: left;
-                                    }
-                                    
-                                    .card {
-                                        /* Add shadows to create the "card" effect */
-                                        box-shadow: 0 8px 16px 0 rgba(71, 134, 129, 0.2);
-                                        transition: 0.3s;
-                                        border-radius: 10px;
-                                        margin-top: 30px;
-                                        width: 60%;
-                                    }
-                                    /* On mouse-over, add a deeper shadow */
-                                    
-                                    .card:hover {
-                                        box-shadow: 0 12px 20px 0 rgba(104, 6, 6, 0.2);
-                                    }
-                                    /* Add some padding inside the card container */
-                                    
-                                    .card_container {
-                                        padding: 2px 16px;
-                                        text-align: center;
-                                    }
-                                    
-                                    .card_contain {
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                    }
-                                    
-                                    select {
-                                        width: 200px;
-                                        padding: 10px;
-                                        border-radius: 10px;
-                                        margin-bottom: 10px;
-                                    }
-                                    
-                                    .clas {
-                                        color: rgba(97, 168, 170, 0.6)
-                                    }
+
+#productName {
+    width: auto;
+}
+
+@media screen and (max-width: 600px) {
+    select {
+        width: 50%;
+        text-align: center;
+    }
+    ul.topnav li.right,
+    ul.topnav li {
+        float: none;
+    }
+    .topnav a {
+        font-size: 9px;
+    }
+    .center {
+        width: 100%;
+    }
+    .form,
+    label,
+    input,
+    img,
+    header {
+        width: 100%;
+        margin-top: 0;
+    }
+    label {
+        text-align: center;
+    }
+    #product_image {
+        text-align: right;
+        margin: auto;
+    }
+}
+
+.img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.navigation-bar ul {
+    padding: 0;
+    margin: 20px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.container {
+    text-align: center;
+}
+
+.container>#add_p>#add_prod {
+    text-align: center;
+    border: 10px solid rgb(98, 133, 134);
+    padding: 10px;
+    margin: 20px;
+    width: 65%;
+}
+
+.container>#add_p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#result {
+    text-align: left;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 8px 16px 0 rgba(71, 134, 129, 0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 60%;
+}
+
+
+/* On mouse-over, add a deeper shadow */
+
+.card:hover {
+    box-shadow: 0 12px 20px 0 rgba(104, 6, 6, 0.2);
+}
+
+
+/* Add some padding inside the card container */
+
+.card_container {
+    padding: 2px 16px;
+    text-align: center;
+}
+
+.card_contain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+select {
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: transparent;
+}
+
+.clas {
+    color: rgba(97, 168, 170, 0.6)
+}

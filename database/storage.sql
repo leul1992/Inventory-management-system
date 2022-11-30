@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS `product` (
     `product_image` text NOT NULL,
     `brand_id` int(11) NOT NULL,
   `categories_id` int(11) NOT NULL,
+  `price` varchar(255) NOT NULL,
     `quantity` varchar(255) NOT NULL,
     `rate` varchar(255) NOT NULL,
     `active` int(11) NOT NULL DEFAULT '0',

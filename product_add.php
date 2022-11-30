@@ -10,7 +10,7 @@
             <label for="product_image" name="product_image">Product Image</label>
             <input type="file" name="product_image" id="product_image" accept="image/*" value="" required><br/>
             <label for=" product_name ">Product Name</label>
-            <input type="text " name="product_name" required><br/>
+            <input type="text" name="product_name" required><br/>
             <label for="quantity" name="quantity">Quantity</label>
             <input type="text" name="quantity" id="quantity" required><br/>
             <label for="price" name="price">Price</label>
@@ -38,6 +38,7 @@
                         ?>
                     </select>
         <br/>
+        <label style="width:50%;text-align:center;">category</label>
                 <select name="brand_id" id="brand_id" style="width: 200px; display: inline-block;">
                             <option value="">SELECT</option>
                             <?php
@@ -51,7 +52,6 @@
                             ?>
                         </select>
                         <br>
-                        <label style="width:50%;text-align:center;">category</label>
             <button type="submit" name="add" id="btn">Add</button>
         </form>
         </div>
