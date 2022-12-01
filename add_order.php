@@ -37,7 +37,7 @@ $user_data = check_login($conn);
             <input type="date" name="orderDate" id="orderDate" required><br/>
             
             <label for="vatValue" name="vatValue">vatValue</label>
-            <input type="text" name="vatValue" id="vatValue" required value="15" read only><br/>
+            <input type="text" name="vatValue" id="vatValue" required value="15" readonly="readonly"><br/>
             
             <label for="discount" name="discount">Discount in %</label>
             <input type="text" name="discount" id="discount" required>
