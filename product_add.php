@@ -12,11 +12,11 @@
             <label for=" product_name ">Product Name</label>
             <input type="text" name="product_name" required><br/>
             <label for="quantity" name="quantity">Quantity</label>
-            <input type="text" name="quantity" id="quantity" required><br/>
+            <input type="number" name="quantity" id="quantity" required><br/>
             <label for="price" name="price">Price</label>
-            <input type="text" name="price" id="price" required><br/>
+            <input type="number" name="price" id="price" required><br/>
             <label for="rate" name="rate">Rate</label>
-            <input type="text" name="rate" id="rate" required><br/>
+            <input type="number" name="rate" id="rate" required><br/>
             <label for="status">Status</label>
         <select class="" id="status" name="status" required>
             <option value="" name="available">SELECT</option>
@@ -24,7 +24,7 @@
             <option value="2">Not Available</option>
         </select>
         <br/>
-            <label style="width:50%;text-align:center;">Brand</label>
+            <label style="width:50%;text-align:center;">Category</label>
             <select name="category_id" id="category_id" style="width: 200px; display: inline-block;">
                         <option value="">SELECT</option>
                         <?php
@@ -38,7 +38,7 @@
                         ?>
                     </select>
         <br/>
-        <label style="width:50%;text-align:center;">category</label>
+        <label style="width:50%;text-align:center;">Brand</label>
                 <select name="brand_id" id="brand_id" style="width: 200px; display: inline-block;">
                             <option value="">SELECT</option>
                             <?php

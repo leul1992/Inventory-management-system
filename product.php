@@ -25,7 +25,7 @@ $user_data = check_login($conn);
                 <div class="card_container">
                     Product Name:<?php echo " ".$row['product_name'];?>
                     <br/>Quantity: <?php echo " ".$row['quantity'];?>
-                    <br/>Price: <?php echo " ".$row['rate'];?>
+                    <br/>Price: <?php echo " ".$row['price'];?>
                     <br/>Rate: <?php echo " ".$row['rate'];?>
                     <br/>Status: <?php echo " ".$row['status'];?>
                     <br/><a href="update_prod.php?id=<?php echo $row["product_id"]; ?>"><button type="submit" name="update">Update</button></a>

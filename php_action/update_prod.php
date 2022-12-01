@@ -12,7 +12,7 @@ if (count($_POST)>0){
 	$id=$_POST['id'];
 	$sql = "UPDATE product 
     SET product_name='$product_name', brand_id='$brandName', categories_id='$categoryName',
-    quantity= '$quantity', rate= '$rate', active=1, status='$status' WHERE product_id='$id'";
+    quantity= '$quantity', price='$price', rate= '$rate', active=1, status='$status' WHERE product_id='$id'";
 
 	if($conn->query($sql) === TRUE) {
 		$valid['success'] = true;

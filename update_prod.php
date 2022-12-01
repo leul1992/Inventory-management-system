@@ -12,13 +12,13 @@ $row1 = $result->fetch_assoc();
 <form method="POST" action="php_action/update_prod.php" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $row1['product_id'];?>">
             <label for=" product_name ">Product Name</label>
-            <input type="text " name="product_name" value="<?php echo $row1['product_name'];?>" required><br/>
+            <input type="text" name="product_name" value="<?php echo $row1['product_name'];?>" required><br/>
             <label for="quantity" name="quantity">Quantity</label>
-            <input type="text" name="quantity" id="quantity" value="<?php echo $row1['quantity'];?>" required><br/>
+            <input type="number" name="quantity" id="quantity" value="<?php echo $row1['quantity'];?>" required><br/>
             <label for="price" name="price">Price</label>
-            <input type="text" name="price" id="price" value="something" required><br/>
+            <input type="number" name="price" id="price" value="<?php echo $row1['price'];?>" required><br/>
             <label for="rate" name="rate">Rate</label>
-            <input type="text" name="rate" id="rate" value="<?php echo $row1['rate'];?>" required><br/>
+            <input type="number" name="rate" id="rate" value="<?php echo $row1['rate'];?>" required><br/>
             <label for="status">Status</label>
         <select class="" id="status" name="status" value="<?php echo $row1['status'];?>"required>
             <option value="<?php  echo $row1['status'];?>" name="available">SELECT</option>

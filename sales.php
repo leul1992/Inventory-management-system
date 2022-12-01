@@ -11,7 +11,7 @@ include_once "php_action/functions.php";
 <div class="form">
         <form method="POST" action="php_action/add_sales.php" enctype="multipart/form-data">
             <label for=" product_name ">Product Name</label>
-            <input type="text " name="product_name" required><br/>
+            <input type="text" name="product_name" required><br/>
             <label for="quantity" name="quantity">Quantity</label>
             <input type="text" name="quantity" id="quantity" required><br/>
             <label for="bprice" name="bprice">Buying Price</label>

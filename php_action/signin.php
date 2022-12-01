@@ -29,7 +29,7 @@ if(!isset($_SESSION))
 
 					$user_data = mysqli_fetch_assoc($result);
 					
-					if($user_data['password'] === $password)
+					if(htmlspecialchars($user_data['password']) === htmlspecialchars($password))
 					{
 
 						$_SESSION['user_id'] = $user_data['user_name'];
