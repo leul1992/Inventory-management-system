@@ -18,7 +18,7 @@ function check_login($conn)
 	}
 
 	//redirect to login
-    header('Location: http://localhost/inventory-management-system/signin.php');	
+    header('Location: http://web-01.leulnow.tech/signin.php');	
 	die();
 /*  echo "session not created";   */ 
 

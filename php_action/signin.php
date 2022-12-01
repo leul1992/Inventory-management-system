@@ -33,7 +33,7 @@ if(!isset($_SESSION))
 					{
 
 						$_SESSION['user_id'] = $user_data['user_name'];
-						header("Location: http://localhost/inventory-management-system/index.php");
+						header("Location: http://web-01.leulnow.tech/index.php");
 						die;
 					}
 				}

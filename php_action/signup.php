@@ -33,7 +33,7 @@ if (!mysqli_query($conn, $sql))
   die('Error: ' . mysqli_error($conn));
   }
 else{
-header('Location: http://localhost/inventory-management-system/signin.php');
+header('Location: http://web-01.leulnow.tech/signin.php');
 }
 }
 

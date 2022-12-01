@@ -18,6 +18,6 @@ $sql = "INSERT INTO categories (categories_name, categories_active, categories_s
             $conn->close();
 
 	echo json_encode($valid);
-	header('Location: http://localhost/inventory-management-system/categories.php');
+	header('Location: http://web-01.leulnow.tech/categories.php');
             }
 ?>

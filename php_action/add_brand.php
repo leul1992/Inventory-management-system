@@ -19,7 +19,7 @@ $sql = "INSERT INTO brands (brand_name, brand_active, brand_status)
             $conn->close();
 
 	echo json_encode($valid);
-    header('Location: http://localhost/inventory-management-system/brand.php');
+    header('Location: http://web-01.leulnow.tech/brand.php');
             }
 			
 ?>

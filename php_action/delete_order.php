@@ -16,6 +16,6 @@ if ($id){
     $conn->close();
     
     echo json_encode($valid);
-    header('Location: http://localhost/inventory-management-system/index.php');
+    header('Location: http://web-01.leulnow.tech/index.php');
 }
 ?>

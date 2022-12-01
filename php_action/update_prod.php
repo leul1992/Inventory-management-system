@@ -27,7 +27,7 @@ if (count($_POST)>0){
     $conn->close();
     
     echo json_encode($valid);
-    header('Location: http://localhost/inventory-management-system/product.php');		
+    header('Location: http://web-01.leulnow.tech/product.php');		
 
     
 }

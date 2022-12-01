@@ -18,7 +18,7 @@ $sql = "UPDATE categories SET categories_name='$categories_name', categories_act
             $conn->close();
 
 	echo json_encode($valid);
-    header('Location: http://localhost/inventory-management-system/categories.php');
+    header('Location: http://web-01.leulnow.tech/categories.php');
             }
     
 ?>
