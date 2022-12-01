@@ -6,23 +6,30 @@ if(!isset($_SESSION))
 }
 $valid['success'] = array('success' => false, 'messages' => array());
 if (isset($_POST)){
+    $prod_id = $_POST['productName'];
+    $sql1 = "SELECT price FROM product WHERE product_id='$prod_id'";
+    $result1 = $conn->query($sql1);
+    $price1 = $result1->fetch_assoc();
+    $price1 = $price1['price'];
+    
+    
     $orderDate 						= date('Y-m-d', strtotime($_POST['orderDate']));	
     $client_name 					= $_POST['client_name'];
     $client_contract 				= $_POST['client_contract'];
-    $subTotalValue 				= $_POST['subTotalValue'];
+    $totalAmountValue     = $price1*$_POST['quantity'];
+   
     $vatValue 						=	$_POST['vatValue'];
-    $totalAmountValue     = $_POST['totalAmountValue'];
     $discount 						= $_POST['discount'];
-    $grandTotalValue 			= $_POST['grandTotalValue'];
-    $paid 								= $_POST['paid'];
-    $dueValue 						= $_POST['dueValue'];
+    $grandTotalValue 			= $totalAmountValue-(($totalAmountValue*$discount)/100)+(($totalAmountValue*$vatValue)/100);
+    
+    
     $paymentType 					= $_POST['paymentType'];
     $paymentStatus 				= $_POST['paymentStatus'];
     $paymentPlace 				= $_POST['paymentPlace'];
     $userid 				= $_SESSION['user_id'];
   
                   
-      $sql = "INSERT INTO orders (order_date, client_name, client_contact, sub_total, vat, total_amount, discount, grand_total, paid, due, payment_type, payment_status,payment_place,order_status,user_id) VALUES ('$orderDate', '$client_name', '$client_contract', '$subTotalValue', '$vatValue', '$totalAmountValue', '$discount', '$grandTotalValue', '$paid', '$dueValue', $paymentType, $paymentStatus,$paymentPlace, 1,'$userid')";
+      $sql = "INSERT INTO orders (order_date, client_name, client_contact, vat, total_amount, discount, grand_total, payment_type, payment_status,payment_place,order_status,user_id) VALUES ('$orderDate', '$client_name', '$client_contract', '$vatValue', '$totalAmountValue', '$discount', '$grandTotalValue', $paymentType, $paymentStatus,$paymentPlace, 1,'$userid')";
       
       $order_id;
       $orderStatus = false;
@@ -54,7 +61,7 @@ if (isset($_POST)){
   
                   // add into order_item
                   $orderItemSql = "INSERT INTO order_item (order_id, product_id, quantity, rate, total, order_item_status) 
-                  VALUES ('$order_id', '".$_POST['productName']."', '".$_POST['quantity']."', '".$updateProductQuantityResult['rate']."', '".$totalAmountValue."', 1)";
+                  VALUES ('$order_id', '".$_POST['productName']."', '".$_POST['quantity']."', '".$updateProductQuantityResult['rate']."', '".$grandTotalValue."', 1)";
   
                   	
   

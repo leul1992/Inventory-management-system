@@ -1,7 +1,7 @@
 <?php
-$username = 'Inventory';
-$pwd = 'Inventory_101';
-$host = '3.236.18.6';
+$username = 'root';
+$pwd = '';
+$host = 'localhost';
 $db = 'storage';
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
