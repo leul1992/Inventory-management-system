@@ -1,4 +1,5 @@
 <?php
+//add product by gettin values from the form fields from ../add_brand
 include_once 'connect.php';
 $valid['success'] = array('success' => false, 'messages' => array());
 if (isset($_POST)){
@@ -19,7 +20,7 @@ $sql = "INSERT INTO brands (brand_name, brand_active, brand_status)
             $conn->close();
 
 	echo json_encode($valid);
-    header('Location: http://web-01.leulnow.tech/brand.php');
+    header('Location: http://localhost/inventory-management-system/brand.php');
             }
 			
 ?>

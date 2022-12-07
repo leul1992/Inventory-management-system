@@ -1,4 +1,5 @@
 <?php
+//get data from order
 require 'connect.php';
 $output = array('data' => array());
 if (isset($_POST)){ 

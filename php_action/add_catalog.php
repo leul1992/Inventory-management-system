@@ -1,4 +1,5 @@
 <?php
+//add catalog by gettin values from the form fields from ../add_catelog
 include_once 'connect.php';
 $valid['success'] = array('success' => false, 'messages' => array());
 if (isset($_POST)){

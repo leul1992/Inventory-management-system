@@ -2,6 +2,7 @@
 include_once 'connect.php';
 $valid['success'] = array('success' => false, 'messages' => array());
 if (isset($_POST)){
+	//get values from ../sales.php and add to sales database
 $product_name = $_POST['product_name'];
 $quantity = $_POST['quantity'];
 $bprice = $_POST['bprice'];

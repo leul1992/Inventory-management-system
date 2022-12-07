@@ -1,4 +1,5 @@
 <?php
+//get the data from brand
 include_once 'connect.php';
 $output = array('data' => array());
 if (isset($_POST)){

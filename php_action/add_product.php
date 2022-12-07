@@ -2,6 +2,7 @@
 include_once 'connect.php';
 $valid['success'] = array('success' => false, 'messages' => array());
 if (isset($_POST)){
+	//get value from form inputs of ../product_add.php and add to database
 $product_name = $_POST['product_name'];
 $quantity = $_POST['quantity'];
 $price = $_POST['price'];
@@ -16,8 +17,7 @@ $type = explode('.', $_FILES['product_image']['name']);
 	if(in_array($type, array('gif', 'jpg', 'jpeg', 'png', 'JPG', 'GIF', 'JPEG', 'PNG'))) {
 		if(is_uploaded_file($_FILES['product_image']['tmp_name'])) {			
 			if(move_uploaded_file($_FILES['product_image']['tmp_name'], $url)) {
-				
-				$sql = "INSERT INTO product (product_name, product_image, brand_id, categories_id, quantity, price, rate, active, status) 
+								$sql = "INSERT INTO product (product_name, product_image, brand_id, categories_id, quantity, price, rate, active, status) 
 				VALUES ('$product_name', '$path', '$brandName', '$categoryName', '$quantity', '$price', '$rate', 1, '$status')";
 
 				if($conn->query($sql) === TRUE) {
@@ -37,6 +37,6 @@ $type = explode('.', $_FILES['product_image']['name']);
 	$conn->close();
 
 	echo json_encode($valid);
-	header('Location: http://web-01.leulnow.tech/product.php');
+	header('Location: http://localhost/inventory-management-system/product.php');
 }
 ?>

@@ -3,6 +3,7 @@ include_once 'connect.php';
 $valid['success'] = array('success' => false, 'messages' => array());
 $id = $_GET['id'];
 if ($id){
+    //delete product from delete button of ../product.php
     $sql = "DELETE FROM `product` WHERE `product_id` ='$id'";
     $result = $conn->query($sql);
     if($conn->query($sql) === TRUE) {
@@ -15,6 +16,6 @@ if ($id){
     $conn->close();
     
     echo json_encode($valid);
-    header('Location: http://web-01.leulnow.tech/product.php');
+    header('Location: http://localhost/inventory-management-system/product.php');
 }
 ?>

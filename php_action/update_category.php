@@ -2,6 +2,7 @@
 include_once 'connect.php';
 $valid['success'] = array('success' => false, 'messages' => array());
 if (count($_POST)>0){
+	//update the categories when update button is clicked in ../categories.php
 $categories_name = $_POST['category_name'];
 $status = $_POST['category_Status'];
 $id=$_POST['id'];
@@ -18,7 +19,7 @@ $sql = "UPDATE categories SET categories_name='$categories_name', categories_act
             $conn->close();
 
 	echo json_encode($valid);
-    header('Location: http://web-01.leulnow.tech/categories.php');
+    header('Location: http://localhost/inventory-management-system/categories.php');
             }
     
 ?>

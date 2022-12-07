@@ -2,6 +2,7 @@
 
 function check_login($conn)
 {
+	//check the login session of a user
 
 	if(isset($_SESSION['user_id']))
 	{
@@ -18,7 +19,7 @@ function check_login($conn)
 	}
 
 	//redirect to login
-    header('Location: http://web-01.leulnow.tech/signin.php');	
+    header('Location: http://localhost/inventory-management-system/signin.php');	
 	die();
 /*  echo "session not created";   */ 
 

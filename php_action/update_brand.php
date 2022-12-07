@@ -2,6 +2,7 @@
 include_once 'connect.php';
 $valid['success'] = array('success' => false, 'messages' => array());
 if (count($_POST)>0){
+	//update the brand when update button is clicked in ../brand.php
 $brand_name = $_POST['brand_name'];
 $status = $_POST['brandStatus'];
 
@@ -19,7 +20,7 @@ $sql = "UPDATE brands SET brand_name='$brand_name', brand_active=1, brand_status
             $conn->close();
 
 	echo json_encode($valid);
-    header('Location: http://web-01.leulnow.tech/brand.php');
+    header('Location: http://localhost/inventory-management-system/brand.php');
             }
     
 ?>

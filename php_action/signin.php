@@ -1,5 +1,6 @@
 <?php 
-
+//check if exist and create a session for user
+//if not exists show error message
 if(!isset($_SESSION)) 
     { 
         session_start(); 
@@ -33,7 +34,7 @@ if(!isset($_SESSION))
 					{
 
 						$_SESSION['user_id'] = $user_data['user_name'];
-						header("Location: http://web-01.leulnow.tech/index.php");
+						header("Location: http://localhost/inventory-management-system/index.php");
 						die;
 					}
 				}

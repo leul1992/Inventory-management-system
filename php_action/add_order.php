@@ -6,6 +6,7 @@ if(!isset($_SESSION))
 }
 $valid['success'] = array('success' => false, 'messages' => array());
 if (isset($_POST)){
+    // get tha values from the form ../add_order.php
     $prod_id = $_POST['productName'];
     $sql1 = "SELECT price FROM product WHERE product_id='$prod_id'";
     $result1 = $conn->query($sql1);
@@ -28,7 +29,7 @@ if (isset($_POST)){
     $paymentPlace 				= $_POST['paymentPlace'];
     $userid 				= $_SESSION['user_id'];
   
-                  
+       //insert into   orders with the values from the ../add_order.php         
       $sql = "INSERT INTO orders (order_date, client_name, client_contact, vat, total_amount, discount, grand_total, payment_type, payment_status,payment_place,order_status,user_id) VALUES ('$orderDate', '$client_name', '$client_contract', '$vatValue', '$totalAmountValue', '$discount', '$grandTotalValue', $paymentType, $paymentStatus,$paymentPlace, 1,'$userid')";
       
       $order_id;
@@ -47,7 +48,7 @@ if (isset($_POST)){
       echo $_POST['productName'];
       $orderItemStatus = false;
   
-      			
+      		//select product with product_name equaling inputed product name
           $updateProductQuantitySql = "SELECT * FROM product WHERE product.product_id = ".$_POST['productName']."";
           $updateProductQuantityData = $conn->query($updateProductQuantitySql);
           
@@ -68,7 +69,7 @@ if (isset($_POST)){
                   if($conn->query($orderItemSql)) {
                       $orderItemStatus = true;
                   }		
-          } // while	
+          } 	
       
   
       $valid['success'] = true;
@@ -77,6 +78,6 @@ if (isset($_POST)){
       $conn->close();
   
       echo json_encode($valid);
-      header('Location: http://web-01.leulnow.tech/index.php');
+      header('Location: http://localhost/inventory-management-system/index.php');
             }
             ?>

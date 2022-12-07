@@ -13,6 +13,7 @@ if(!isset($_SESSION))
  <?php
  if(isset($_POST))
  {
+  //populate user database with the form input from ../signup.php
 $full_name=$_POST["fullname"];
 $email=$_POST["email"];  
 $user_name=$_POST["username"];
@@ -33,7 +34,7 @@ if (!mysqli_query($conn, $sql))
   die('Error: ' . mysqli_error($conn));
   }
 else{
-header('Location: http://web-01.leulnow.tech/signin.php');
+header('Location: http://localhost/inventory-management-system/signin.php');
 }
 }
 

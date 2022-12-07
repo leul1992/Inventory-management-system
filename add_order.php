@@ -32,7 +32,7 @@ $user_data = check_login($conn);
             <label for="client_name" name="client_name">Client Name</label>
             <input type="text" name="client_name" id="client_name" accept="image/*" value="" required><br/>
             <label for=" client_contract ">Client Contract</label>
-            <input type="text " name="client_contract" id ="client_contract"required><br/>
+            <input type="tel" name="client_contract" id ="client_contract"required><br/>
             <label for="orderDate" name="orderDate">order Date</label>
             <input type="date" name="orderDate" id="orderDate" required><br/>
             

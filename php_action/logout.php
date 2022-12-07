@@ -1,5 +1,5 @@
 <?php
-
+// stop the session started by  a user
 session_start();
 
 

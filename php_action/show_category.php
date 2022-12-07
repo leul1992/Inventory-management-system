@@ -1,4 +1,5 @@
 <?php
+//get data from categories
 include_once 'connect.php';
 $valid['success'] = array('success' => false, 'messages' => array());
 if (isset($_POST)){

@@ -1,4 +1,5 @@
 <?php
+//add category by gettin values from the form fields from ../add_categories.php
 include_once 'connect.php';
 $valid['success'] = array('success' => false, 'messages' => array());
 if (isset($_POST)){
@@ -18,6 +19,6 @@ $sql = "INSERT INTO categories (categories_name, categories_active, categories_s
             $conn->close();
 
 	echo json_encode($valid);
-	header('Location: http://web-01.leulnow.tech/categories.php');
+	header('Location: http://localhost/inventory-management-system/categories.php');
             }
 ?>
